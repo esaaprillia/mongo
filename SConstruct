@@ -455,6 +455,7 @@ add_option(
 
 # Most of the "use-system-*" options follow a simple form.
 for pack in [
+    ('abseil-cpp',),
     (
         'asio',
         'ASIO',
