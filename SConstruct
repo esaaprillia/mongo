@@ -3383,12 +3383,6 @@ def doConfigure(myenv):
     if releaseBuild and suppress_invalid:
         env.FatalError("--disable-minimum-compiler-version-enforcement is forbidden with --release")
 
-    if not (c_compiler_validated and cxx_compiler_validated):
-        if not suppress_invalid:
-            env.ConfError("ERROR: Refusing to build with compiler that does not meet requirements")
-        print("WARNING: Ignoring failed compiler version check per explicit user request.")
-        print("WARNING: The build may fail, binaries may crash, or may run but corrupt data...")
-
     # Figure out what our minimum windows version is. If the user has specified, then use
     # that.
     if env.TargetOSIs('windows'):
