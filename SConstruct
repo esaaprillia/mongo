@@ -5330,7 +5330,7 @@ def doConfigure(myenv):
     conf.env['MONGO_HAVE_LIBMONGOC'] = False
     if mongoc_mode != 'off':
         if conf.CheckLibWithHeader(
-            ["mongoc-1.0"],
+            ["libmongoc-1.0"],
             ["mongoc/mongoc.h"],
                 "C",
                 call="mongoc_get_major_version();",
