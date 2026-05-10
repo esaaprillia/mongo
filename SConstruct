@@ -5312,7 +5312,7 @@ def doConfigure(myenv):
 
     def CheckMongoCMinVersion(context):
         compile_test_body = textwrap.dedent("""
-        #include <mongoc/mongoc.h>
+        #include <libmongoc-1.0/mongoc/mongoc.h>
 
         #if !MONGOC_CHECK_VERSION(1,13,0)
         #error
