@@ -5312,7 +5312,7 @@ def doConfigure(myenv):
 
     def CheckMongoCMinVersion(context):
         compile_test_body = textwrap.dedent("""
-        #include <mongoc/mongoc.h>
+        #include <libmongoc-1.0/mongoc/mongoc.h>
 
         #if !MONGOC_CHECK_VERSION(1,13,0)
         #error
@@ -5330,7 +5330,7 @@ def doConfigure(myenv):
     conf.env['MONGO_HAVE_LIBMONGOC'] = False
     if mongoc_mode != 'off':
         if conf.CheckLibWithHeader(
-            ["mongoc-1.0"],
+            ["libmongoc-1.0"],
             ["mongoc/mongoc.h"],
                 "C",
                 call="mongoc_get_major_version();",
