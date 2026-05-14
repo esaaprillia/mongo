@@ -3244,7 +3244,7 @@ if not env.TargetOSIs('windows', 'macOS') and (env.ToolchainIs('GCC', 'clang')):
     # CXXFLAGS.
 
     default_targeting_flags_for_architecture = {
-        "aarch64": {"-march=": "armv8.2-a", "-mtune=": "generic"},
+        "aarch64": {"-march=": "armv8-a", "-mtune=": "generic"},
         "i386": {"-march=": "nocona", "-mtune=": "generic"},
         "ppc64le": {"-mcpu=": "power8", "-mtune=": "power8", "-mcmodel=": "medium"},
         "s390x": {"-march=": "z196", "-mtune=": "zEC12"},
